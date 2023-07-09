@@ -11,6 +11,9 @@
 
 ### Creational patterns
 1. **Factory Method :** It is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
+2. **Abstract Factory :** It is a creational design pattern that lets you produce families of related objects without specifying their concrete classes.
+
+
 
 
 ### Reference links
