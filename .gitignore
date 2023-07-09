@@ -1,0 +1,11 @@
+**/*.DS_Store*
+
+node_modules
+yarn-error.log
+
+.vscode/*
+!.vscode/*.example.json
+
+dist
+# ignore source map for typescript/css file
+*.map

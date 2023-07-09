@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "baseUrl": "./",
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": true,
+    
+    "lib": [
+      "esnext",
+      "dom",
+    ],
+    "importHelpers": true,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
