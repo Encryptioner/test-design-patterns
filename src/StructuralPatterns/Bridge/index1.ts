@@ -88,3 +88,5 @@ console.log('');
 implementation = new ConcreteImplementationB();
 abstraction = new ExtendedAbstraction(implementation);
 clientCode(abstraction);
+
+export {};
