@@ -34,11 +34,15 @@ abstract class Component {
    * object tree assembly. The downside is that these methods will be empty
    * for the leaf-level components.
    */
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
-  public add(component: Component): void { }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public add(component: Component): void {
+    // ...
+  }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-empty-function
-  public remove(component: Component): void { }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  public remove(component: Component): void {
+    // ...
+  }
 
   /**
    * You can provide a method that lets the client code figure out whether a
