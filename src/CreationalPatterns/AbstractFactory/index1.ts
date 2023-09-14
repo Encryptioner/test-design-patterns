@@ -1,16 +1,16 @@
 /**
-* Each distinct product of a product family should have a base interface. All
-* variants of the product must implement this interface.
-*/
+ * Each distinct product of a product family should have a base interface. All
+ * variants of the product must implement this interface.
+ */
 interface IAbstractProductA {
   usefulFunctionA(): string;
 }
 
 /**
-* Here's the the base interface of another product. All products can interact
-* with each other, but proper interaction is possible only between products of
-* the same concrete variant.
-*/
+ * Here's the the base interface of another product. All products can interact
+ * with each other, but proper interaction is possible only between products of
+ * the same concrete variant.
+ */
 interface IAbstractProductB {
   /**
    * Product B is able to do its own thing...
@@ -41,8 +41,8 @@ interface IAbstractFactory {
 }
 
 /**
-* These Concrete Products are created by corresponding Concrete Factories.
-*/
+ * These Concrete Products are created by corresponding Concrete Factories.
+ */
 class ConcreteProductA1 implements IAbstractProductA {
   public usefulFunctionA(): string {
     return 'The result of the product A1.';
@@ -50,8 +50,8 @@ class ConcreteProductA1 implements IAbstractProductA {
 }
 
 /**
-* These Concrete Products are created by corresponding Concrete Factories.
-*/
+ * These Concrete Products are created by corresponding Concrete Factories.
+ */
 class ConcreteProductB1 implements IAbstractProductB {
   public usefulFunctionB(): string {
     return 'The result of the product B1.';
@@ -69,11 +69,11 @@ class ConcreteProductB1 implements IAbstractProductB {
 }
 
 /**
-* Concrete Factories produce a family of products that belong to a single
-* variant. The factory guarantees that resulting products are compatible. Note
-* that signatures of the Concrete Factory's methods return an abstract product,
-* while inside the method a concrete product is instantiated.
-*/
+ * Concrete Factories produce a family of products that belong to a single
+ * variant. The factory guarantees that resulting products are compatible. Note
+ * that signatures of the Concrete Factory's methods return an abstract product,
+ * while inside the method a concrete product is instantiated.
+ */
 class ConcreteFactory1 implements IAbstractFactory {
   public createProductA(): IAbstractProductA {
     return new ConcreteProductA1();
@@ -107,8 +107,8 @@ class ConcreteProductB2 implements IAbstractProductB {
 }
 
 /**
-* Each Concrete Factory has a corresponding product variant.
-*/
+ * Each Concrete Factory has a corresponding product variant.
+ */
 class ConcreteFactory2 implements IAbstractFactory {
   public createProductA(): IAbstractProductA {
     return new ConcreteProductA2();
@@ -133,8 +133,8 @@ function clientCode(factory: IAbstractFactory): void {
 }
 
 /**
-* The client code can work with any concrete factory class.
-*/
+ * The client code can work with any concrete factory class.
+ */
 console.log('Client: Testing client code with the first factory type...');
 clientCode(new ConcreteFactory1());
 

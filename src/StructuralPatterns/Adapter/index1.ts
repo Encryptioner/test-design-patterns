@@ -16,10 +16,10 @@ class Target {
 }
 
 /**
-* The Adaptee contains some useful behavior, but its interface is incompatible
-* with the existing client code. The Adaptee needs some adaptation before the
-* client code can use it.
-*/
+ * The Adaptee contains some useful behavior, but its interface is incompatible
+ * with the existing client code. The Adaptee needs some adaptation before the
+ * client code can use it.
+ */
 class Adaptee {
   public specificRequest(): string {
     return '.eetpadA eht fo roivaheb laicepS';
@@ -27,9 +27,9 @@ class Adaptee {
 }
 
 /**
-* The Adapter makes the Adaptee's interface compatible with the Target's
-* interface.
-*/
+ * The Adapter makes the Adaptee's interface compatible with the Target's
+ * interface.
+ */
 class Adapter extends Target {
   private adaptee: Adaptee;
 
@@ -45,8 +45,8 @@ class Adapter extends Target {
 }
 
 /**
-* The client code supports all classes that follow the Target interface.
-*/
+ * The client code supports all classes that follow the Target interface.
+ */
 function clientCode(target: Target): void {
   console.log(target.request());
 }

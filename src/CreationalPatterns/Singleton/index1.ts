@@ -46,8 +46,8 @@ class Singleton {
 }
 
 /**
-* The client code.
-*/
+ * The client code.
+ */
 function clientCode(): void {
   const s1 = Singleton.getInstance();
   const s2 = Singleton.getInstance();

@@ -61,12 +61,12 @@ abstract class Component {
 }
 
 /**
-* The Leaf class represents the end objects of a composition. A leaf can't have
-* any children.
-*
-* Usually, it's the Leaf objects that do the actual work, whereas Composite
-* objects only delegate to their sub-components.
-*/
+ * The Leaf class represents the end objects of a composition. A leaf can't have
+ * any children.
+ *
+ * Usually, it's the Leaf objects that do the actual work, whereas Composite
+ * objects only delegate to their sub-components.
+ */
 class Leaf extends Component {
   public operation(): string {
     return 'Leaf';
@@ -74,10 +74,10 @@ class Leaf extends Component {
 }
 
 /**
-* The Composite class represents the complex components that may have children.
-* Usually, the Composite objects delegate the actual work to their children and
-* then "sum-up" the result.
-*/
+ * The Composite class represents the complex components that may have children.
+ * Usually, the Composite objects delegate the actual work to their children and
+ * then "sum-up" the result.
+ */
 class Composite extends Component {
   protected children: Component[] = [];
 
@@ -118,8 +118,8 @@ class Composite extends Component {
 }
 
 /**
-* The client code works with all of the components via the base interface.
-*/
+ * The client code works with all of the components via the base interface.
+ */
 function clientCode(component: Component): void {
   // ...
 
@@ -129,8 +129,8 @@ function clientCode(component: Component): void {
 }
 
 /**
-* This way the client code can support the simple leaf components...
-*/
+ * This way the client code can support the simple leaf components...
+ */
 const simple = new Leaf();
 console.log('Client: I\'ve got a simple component:');
 clientCode(simple);
@@ -152,10 +152,10 @@ clientCode(tree);
 console.log('');
 
 /**
-* Thanks to the fact that the child-management operations are declared in the
-* base Component class, the client code can work with any component, simple or
-* complex, without depending on their concrete classes.
-*/
+ * Thanks to the fact that the child-management operations are declared in the
+ * base Component class, the client code can work with any component, simple or
+ * complex, without depending on their concrete classes.
+ */
 function clientCode2(
   component1: Component,
   component2: Component,

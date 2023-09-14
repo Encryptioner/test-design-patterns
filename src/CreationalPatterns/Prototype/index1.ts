@@ -47,8 +47,8 @@ class Prototype {
 }
 
 /**
-* The client code.
-*/
+ * The client code.
+ */
 function clientCode(): void {
   const p1 = new Prototype();
   p1.primitive = 245;
